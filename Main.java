@@ -66,7 +66,7 @@ public class Main {
         inventory.put ("Keyboard", 30.00);
         quantity.add(30);
         for(String key: inventory.keySet()){
-            System.out.printf(key + "\t\t" + "%.2f" + "\t\t" + quantity.get(0) + "\n", inventory.get(key) );
+            System.out.printf(key + "\t\t" + "%,.2f" + "\t\t" + quantity.get(0) + "\n", inventory.get(key) );
 
             
         }
