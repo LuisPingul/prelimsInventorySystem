@@ -57,18 +57,18 @@ public class Main {
     public static void displayInventory(){
         System.out.println();
         System.out.println("Inventory:");
-        System.out.println("Item Name\tItem Price\tItem Quantity");
-        System.out.println("---------------------------------------------------");
-        inventory.put ("Laptop", 1200.00);
+        inventory.put("Laptop", 1200.00);
+        inventory.put("Mouse", 25.50);
+        inventory.put("Keyboard", 50.75);
         quantity.add(10);
-        inventory.put ("Mouse", 25.50);
         quantity.add(50);
-        inventory.put ("Keyboard", 30.00);
-        quantity.add(30);
+        quantity.add(30);    
+        System.out.printf("%-15s %-10s %-10s\n","Item Name","Item Price","Item Quantity");
+        System.out.println("---------------------------------------------------");
+        int index = 0;
         for(String key: inventory.keySet()){
-            System.out.printf(key + "\t\t" + "%,.2f" + "\t\t" + quantity.get(0) + "\n", inventory.get(key) );
-
-            
+            System.out.printf("%-15s %-10.2f %-10d\n", key, inventory.get(key), quantity.get(index));
+            index++;
         }
     }
 
